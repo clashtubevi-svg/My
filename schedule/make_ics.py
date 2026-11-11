@@ -9,7 +9,7 @@ L = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//study-schedule//RU", "CALSCALE
      "BEGIN:VTIMEZONE", "TZID:Asia/Chita", "BEGIN:STANDARD", "DTSTART:19700101T000000",
      "TZOFFSETFROM:+0900", "TZOFFSETTO:+0900", "TZNAME:+09", "END:STANDARD", "END:VTIMEZONE"]
 stamp = dt.datetime.now(dt.timezone.utc).strftime("%Y%m%dT%H%M%SZ")
-def esc(s): return s.replace("\\", "\\\\").replace(",", "\\,").replace(";", "\;")
+def esc(s): return s.replace("\\", "\\\\").replace(",", "\\,").replace(";", "\\;")
 for i, l in enumerate(D["lessons"]):
     full, short, teacher = D["subjects"][l["s"]]
     both = l["w"] == "вн"
